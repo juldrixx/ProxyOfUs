@@ -58,7 +58,8 @@ An Among Us mod that adds a bunch of roles, modifiers and game settings
   <summary> v2.0.1 </summary>
   <ul> <li> 2021.4.12s support </li> </ul>
  </details>
-<details>
+</details>
+
 
 -----------------------
 # Installation
