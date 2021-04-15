@@ -1,5 +1,5 @@
 
-[![Discord](./Images/banner.jpg)](https://discord.gg/polus)
+[![Discord](./Images/joinusdiscord.png)](#)
 
 ![Everyone](./Images/Everything.png)
 An Among Us mod that adds a bunch of roles, modifiers and game settings
@@ -96,7 +96,7 @@ A first launch may take up to 5 minutes, so be patient if it doesn't launch imme
 ![Install](https://i.imgur.com/pvBAyZN.png)
 <br/>
 ## Issues
-If you have issues installing Proxy of Us, you can join our [Discord](https://discord.gg/bYSaT74KzT) to receive help.
+If you have issues installing Proxy of Us, you can join our [Discord](#) to receive help.
 
 -----------------------
 # Roles
@@ -556,12 +556,13 @@ Custom hats have been added, made by some very talented artists. These are mostl
 
 -----------------------
 # Bug / Suggestions
-If you have any bugs or any need to contact me, join the [Discord server](https://discord.gg/bYSaT74KzT) or create a ticket on GitHub.
+If you have any bugs or any need to contact me, join the [Discord server](#) or create a ticket on GitHub.
 
 -----------------------
 # Credits & Resources
 [Reactor](https://github.com/NuclearPowered/Reactor) - The framework of the mod\
 [BepInEx](https://github.com/BepInEx) - For hooking game functions\
+[TownOfUs](https://github.com/slushiegoose/Town-Of-Us) - The original "modpack"\
 [Among-Us-Sheriff-Mod](https://github.com/Woodi-dev/Among-Us-Sheriff-Mod) - For the Sheriff role.\
 [Among-Us-Love-Couple-Mod](https://github.com/Woodi-dev/Among-Us-Love-Couple-Mod) - For the inspiration of Lovers role.\
 [ExtraRolesAmongUs](https://github.com/NotHunter101/ExtraRolesAmongUs) - For the Engineer & Medic roles.\
