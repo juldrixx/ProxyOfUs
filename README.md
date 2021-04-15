@@ -1,5 +1,5 @@
 
-[![Discord](./Images/joinusdiscord.png)](#)
+<!-- [![Discord](./Images/joinusdiscord.png)](#) -->
 
 ![Everyone](./Images/Everything.png)
 An Among Us mod that adds a bunch of roles, modifiers and game settings
@@ -95,8 +95,8 @@ A first launch may take up to 5 minutes, so be patient if it doesn't launch imme
 <br/>
 ![Install](https://i.imgur.com/pvBAyZN.png)
 <br/>
-## Issues
-If you have issues installing Proxy of Us, you can join our [Discord](#) to receive help.
+<!-- ## Issues
+If you have issues installing Proxy of Us, you can join our [Discord](#) to receive help. -->
 
 -----------------------
 # Roles
@@ -556,7 +556,7 @@ Custom hats have been added, made by some very talented artists. These are mostl
 
 -----------------------
 # Bug / Suggestions
-If you have any bugs or any need to contact me, join the [Discord server](#) or create a ticket on GitHub.
+If you have any bugs or any need to contact me, <!-- join the [Discord server](#) or --> create a ticket on GitHub.
 
 -----------------------
 # Credits & Resources
@@ -575,4 +575,4 @@ If you have any bugs or any need to contact me, join the [Discord server](#) or 
 [Essentials](https://github.com/DorCoMaNdO/Reactor-Essentials) - For created custom game options.\
 v1.0.3 uses [Essentials](https://github.com/DorCoMaNdO/Reactor-Essentials) directly.\
 v1.1.0 uses a modified version of Essentials that can be found [here](https://github.com/slushiegoose/Reactor-Essentials).\
-v1.2.0 has Essentials embedded and can be found [here](https://github.com/slushiegoose/Proxy-Of-Us/tree/master/source/Patches/CustomOption).
+v1.2.0 has Essentials embedded and can be found [here](https://github.com/juldrixx/ProxyOfUs/tree/master/source/Patches/CustomOption).
