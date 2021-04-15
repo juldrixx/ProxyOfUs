@@ -57,7 +57,7 @@ namespace ProxyOfUs {
             var component =  __instance.GetComponent<AspectPosition>();
             component.DistanceFromEdge = new Vector3(2.7f, 0.4f, 0.0f);
             component.AdjustPosition();
-            __instance.text.text = "<color=#00FF00FF>ProxyOfUs v2.0.1</color>\n" + string.Format("Ping: {0}ms", AmongUsClient.Instance.Ping);
+            __instance.text.text = "<color=#00FF00FF>ProxyOfUs v1.0.0</color>\n" + string.Format("Ping: {0}ms", AmongUsClient.Instance.Ping);
             
             /*             
             if (!MeetingHud.Instance)

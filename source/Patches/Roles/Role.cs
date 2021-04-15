@@ -84,9 +84,9 @@ namespace ProxyOfUs.Roles
 
         public List<KillButtonManager> ExtraButtons = new List<KillButtonManager>();
         public static uint NetId => PlayerControl.LocalPlayer.NetId;
-        public string PlayerName { get; set; } 
+        public string PlayerName { get; set; }
 
-        public string ColorString => "<color=#" + Color.ToHtmlStringRGBA() + ">";
+        public string ColorString => "<color=" + string.Format("#{0:X2}{1:X2}{2:X2}{3:X2}", (byte)(Mathf.Clamp01(Color.r) * 255), (byte)(Mathf.Clamp01(Color.g) * 255), (byte)(Mathf.Clamp01(Color.b) * 255), (byte)(Mathf.Clamp01(Color.a) * 255)) + ">";
 
 
         //public static T Gen<T>()
@@ -384,7 +384,7 @@ namespace ProxyOfUs.Roles
                     var modTask = new GameObject(modifier.Name + "Task").AddComponent<ImportantTextTask>();
                     modTask.transform.SetParent(player.transform, false);
                     modTask.Text =
-                        $"{modifier.ColorString}Modifier: {modifier.Name}\n{modifier.TaskText()}[]";
+                        $"{modifier.ColorString}Modifier: {modifier.Name}\n{modifier.TaskText()}</color>";
                     player.myTasks.Insert(0, modTask);
                 }
 
@@ -392,7 +392,7 @@ namespace ProxyOfUs.Roles
                 if (role.RoleType == RoleEnum.Shifter && role.Player != PlayerControl.LocalPlayer) return;
                 var task = new GameObject(role.Name + "Task").AddComponent<ImportantTextTask>();
                 task.transform.SetParent(player.transform, false);
-                task.Text = $"{role.ColorString}Role: {role.Name}\n{role.TaskText()}[]";
+                task.Text = $"{role.ColorString}Role: {role.Name}\n{role.TaskText()}</color>";
                 player.myTasks.Insert(0, task);
 
             }

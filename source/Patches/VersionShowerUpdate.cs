@@ -23,7 +23,7 @@ namespace ProxyOfUs {
             }
 
             var text = __instance.text;
-            text.text += " - <color=#00FF00FF>ProxyOfUs v2.0.1</color>";
+            text.text += " - <color=#00FF00FF>ProxyOfUs v1.0.0</color>";
         }
     }
 }
