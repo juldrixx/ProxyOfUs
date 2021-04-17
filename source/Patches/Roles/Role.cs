@@ -355,11 +355,11 @@ namespace ProxyOfUs.Roles
                     if (ModifierText != null)
                     {
                         var modifier = Modifier.GetModifier(PlayerControl.LocalPlayer);
-                        ModifierText.text = "Modifier: " + modifier.Name;
+                        ModifierText.text = "<size=5>Modifier: " + modifier.Name + "</size>";
                         ModifierText.color = modifier.Color;
                         ModifierText.fontSize = Scale / 3f;
                         ModifierText.transform.position =
-                            __instance.__this.transform.position - new Vector3(0f, 2.1f, 0f);
+                            __instance.__this.transform.position - new Vector3(0f, 1.5f, 0f);
                         ModifierText.gameObject.SetActive(true);
                     }
                 }
