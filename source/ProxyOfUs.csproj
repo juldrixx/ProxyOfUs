@@ -2,8 +2,8 @@
   <PropertyGroup>
     <RootNamespace>ProxyOfUs</RootNamespace>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <Version>1.0.0-dev1</Version>
-    <GameVersion>2021.4.12s</GameVersion>
+    <Version>1.0.1-dev1</Version>
+    <GameVersion>2021.4.14s</GameVersion>
     <Mappings>NuclearPowered/Mappings:0.4.0</Mappings>
     <Description>ProxyOfUs Mod by Juldrixx</Description>
     <Authors>Juldrixx</Authors>
