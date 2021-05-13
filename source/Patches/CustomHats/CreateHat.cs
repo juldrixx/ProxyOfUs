@@ -48,6 +48,8 @@ namespace ProxyOfUs.CustomHats
             new HatData {name = "pika_hot_pink", bounce = false, highUp = false, offset = new Vector2(-0.1f, 0.4f), author="Juldrixx"},
             new HatData {name = "pika_turquoise", bounce = false, highUp = false, offset = new Vector2(-0.1f, 0.4f), author="Juldrixx"},
             new HatData {name = "pika_lilac", bounce = false, highUp = false, offset = new Vector2(-0.1f, 0.4f), author="Juldrixx"},
+            new HatData {name = "toady", bounce = false, highUp = false, offset = new Vector2(-0.1f, 0.4f), author="Juldrixx"},
+            new HatData {name = "solomonk", bounce = false, highUp = false, offset = new Vector2(-0.1f, 0.4f), author="Juldrixx"},
 
             new HatData {name = "aphex", bounce = false, highUp = false, offset = new Vector2(-0.1f, 0.2f), author="Nassegris"},
             new HatData {name = "junkyard", bounce = false, highUp = false, offset = new Vector2(-0.1f, 0.2f), author="Nassegris"},
