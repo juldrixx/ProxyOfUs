@@ -1,3 +1,6 @@
+// This folder is a Stripped down version of Reactor-Essentials
+// Please use https://github.com/DorCoMaNdO/Reactor-Essentials because it is more updated and less buggy
+
 using System;
 
 namespace ProxyOfUs.CustomOption
@@ -25,7 +28,7 @@ namespace ProxyOfUs.CustomOption
 
         
         
-        public static CustomHeaderOption NeutralRoles;
+        public static CustomHeaderOption NeutralRoles ;
         public static CustomNumberOption JesterOn;
         public static CustomNumberOption ShifterOn;
         public static CustomNumberOption GlitchOn;
@@ -33,7 +36,7 @@ namespace ProxyOfUs.CustomOption
         public static CustomNumberOption ArsonistOn;
 
         
-        public static CustomHeaderOption ImpostorRoles;
+        public static CustomHeaderOption ImpostorRoles ;
         public static CustomNumberOption JanitorOn;
         public static CustomNumberOption MorphlingOn;
         public static CustomNumberOption CamouflagerOn;
@@ -45,82 +48,82 @@ namespace ProxyOfUs.CustomOption
         public static CustomNumberOption SecurityGuardOn ;
 	        */
         
-        public static CustomHeaderOption Modifiers;
+        public static CustomHeaderOption Modifiers ;
         public static CustomNumberOption TorchOn;
-        public static CustomNumberOption DiseasedOn;
+        public static CustomNumberOption DiseasedOn ;
         public static CustomNumberOption FlashOn;
         public static CustomNumberOption TiebreakerOn;
         public static CustomNumberOption DrunkOn;
         public static CustomNumberOption BigBoiOn;
 
         
-        public static CustomHeaderOption CustomGameSettings;
+        public static CustomHeaderOption CustomGameSettings ;
         public static CustomToggleOption ColourblindComms;
         public static CustomToggleOption MeetingColourblind;
         public static CustomToggleOption ImpostorSeeRoles;
-        public static CustomToggleOption DeadSeeRoles;
-        public static CustomNumberOption MaxImpostorRoles;
-        public static CustomNumberOption MaxNeutralRoles;
+        public static CustomToggleOption DeadSeeRoles ;
+        public static CustomNumberOption MaxImpostorRoles ;
+        public static CustomNumberOption MaxNeutralRoles ;
         public static CustomToggleOption RoleUnderName;
         public static CustomNumberOption VanillaGame;
 
-        public static CustomHeaderOption Mayor;
-        public static CustomNumberOption MayorVoteBank;
-        public static CustomToggleOption MayorAnonymous;
+        public static CustomHeaderOption Mayor ;
+        public static CustomNumberOption MayorVoteBank ;
+        public static CustomToggleOption MayorAnonymous ;
 
-		public static CustomHeaderOption Lovers;
+        public static CustomHeaderOption Lovers ;
         public static CustomToggleOption BothLoversDie;
         
-        public static CustomHeaderOption Sheriff;
+        public static CustomHeaderOption Sheriff ;
         public static CustomToggleOption ShowSheriff;
-        public static CustomToggleOption SheriffKillOther;
-        public static CustomToggleOption SheriffKillsJester;
-        public static CustomToggleOption SheriffKillsGlitch;
-        public static CustomToggleOption SheriffKillsArsonist;
-        public static CustomNumberOption SheriffKillCd;
+        public static CustomToggleOption SheriffKillOther ;
+        public static CustomToggleOption SheriffKillsJester ;
+        public static CustomToggleOption SheriffKillsGlitch ;
+        public static CustomToggleOption SheriffKillsArsonist ;
+        public static CustomNumberOption SheriffKillCd ;
         public static CustomToggleOption SheriffBodyReport;
         
         
-        public static CustomHeaderOption Shifter;
-        public static CustomNumberOption ShifterCd;
+        public static CustomHeaderOption Shifter ;
+        public static CustomNumberOption ShifterCd ;
 		public static CustomStringOption WhoShifts;
 	        
         
-        public static CustomHeaderOption Engineer;
-        public static CustomStringOption EngineerPer;
+        public static CustomHeaderOption Engineer ;
+        public static CustomStringOption EngineerPer ;
 
         
         
         
-        public static CustomHeaderOption Investigator;
+        public static CustomHeaderOption Investigator ;
         public static CustomNumberOption FootprintSize;
         public static CustomNumberOption FootprintInterval;
         public static CustomNumberOption FootprintDuration;
         public static CustomToggleOption AnonymousFootPrint;
         public static CustomToggleOption VentFootprintVisible;
 
-        public static CustomHeaderOption TimeLord;
+        public static CustomHeaderOption TimeLord ;
         public static CustomToggleOption RewindRevive;
         public static CustomNumberOption RewindDuration;
         public static CustomNumberOption RewindCooldown;
-        public static CustomToggleOption TimeLordVitals;
+        public static CustomToggleOption TimeLordVitals ;
 
-        public static CustomHeaderOption Medic;
-        public static CustomStringOption ShowShielded;
+        public static CustomHeaderOption Medic ;
+        public static CustomStringOption ShowShielded ;
         public static CustomToggleOption MedicReportSwitch;
-        public static CustomNumberOption MedicReportNameDuration;
-        public static CustomNumberOption MedicReportColorDuration;
+        public static CustomNumberOption MedicReportNameDuration ;
+        public static CustomNumberOption MedicReportColorDuration ;
         public static CustomStringOption WhoGetsNotification;
         public static CustomToggleOption ShieldBreaks;
         
-        public static CustomHeaderOption Seer;
-        public static CustomNumberOption SeerCooldown;
-        public static CustomStringOption SeerInfo;
-        public static CustomStringOption SeeReveal;
-        public static CustomToggleOption NeutralRed;
+        public static CustomHeaderOption Seer ;
+        public static CustomNumberOption SeerCooldown ;
+        public static CustomStringOption SeerInfo ;
+        public static CustomStringOption SeeReveal ;
+        public static CustomToggleOption NeutralRed ;
         
         
-        public static CustomHeaderOption TheGlitch;
+        public static CustomHeaderOption TheGlitch ;
         public static CustomNumberOption MimicCooldownOption;
         public static CustomNumberOption MimicDurationOption;
         public static CustomNumberOption HackCooldownOption;
@@ -130,33 +133,33 @@ namespace ProxyOfUs.CustomOption
         public static CustomStringOption GlitchHackDistanceOption;
 
         
-        public static CustomHeaderOption Morphling;
-        public static CustomNumberOption MorphlingCooldown;
-        public static CustomNumberOption MorphlingDuration;
+        public static CustomHeaderOption Morphling ;
+        public static CustomNumberOption MorphlingCooldown ;
+        public static CustomNumberOption MorphlingDuration ;
 
-        public static CustomHeaderOption Camouflager;
-        public static CustomNumberOption CamouflagerCooldown;
-        public static CustomNumberOption CamouflagerDuration;
+        public static CustomHeaderOption Camouflager ;
+        public static CustomNumberOption CamouflagerCooldown ;
+        public static CustomNumberOption CamouflagerDuration ;
 
-        public static CustomHeaderOption Executioner;
+        public static CustomHeaderOption Executioner ;
         public static CustomStringOption OnTargetDead;
 
         public static CustomHeaderOption Snitch;
-        public static CustomToggleOption SnitchOnLaunch;
+        public static CustomToggleOption SnitchOnLaunch ;
         
         public static CustomHeaderOption Altruist;
-        public static CustomNumberOption ReviveDuration;
+        public static CustomNumberOption ReviveDuration ;
         public static CustomToggleOption AltruistTargetBody;
 	        
         public static CustomHeaderOption Miner;
-        public static CustomNumberOption MineCooldown;
+        public static CustomNumberOption MineCooldown ;
         
         public static CustomHeaderOption Swooper;
-        public static CustomNumberOption SwoopCooldown;
-        public static CustomNumberOption SwoopDuration;
+        public static CustomNumberOption SwoopCooldown ;
+        public static CustomNumberOption SwoopDuration ;
         
         public static CustomHeaderOption Arsonist;
-        public static CustomNumberOption DouseCooldown;
+        public static CustomNumberOption DouseCooldown ;
         public static CustomToggleOption ArsonistGameEnd;
 		
 		
@@ -172,50 +175,49 @@ namespace ProxyOfUs.CustomOption
 			
 			CrewmateRoles =
 				new CustomHeaderOption(num++, "Crewmate Roles");
-			MayorOn = new CustomNumberOption(true, num++, "<color=#704FA8FF>Mayor</color>", 0f, 0f, 100f, 5f, PercentFormat);
-			LoversOn = new CustomNumberOption(true, num++, "<color=#FF66CCFF>Lovers</color>", 0f, 0f, 100f, 5f, PercentFormat);
-			SheriffOn = new CustomNumberOption(true, num++, "<color=#FFFF00FF>Sheriff</color>", 0f, 0f, 100f, 5f, PercentFormat);
-			EngineerOn = new CustomNumberOption(true, num++, "<color=#FFA60AFF>Engineer</color>", 0f, 0f, 100f, 5f, PercentFormat);
-			SwapperOn = new CustomNumberOption(true, num++, "<color=#66E666FF>Swapper</color>", 0f, 0f, 100f, 5f, PercentFormat);
-			InvestigatorOn = new CustomNumberOption(true, num++, "<color=#00B3B3FF>Investigator</color>", 0f, 0f, 100f, 5f, PercentFormat);
-			TimeLordOn = new CustomNumberOption(true, num++, "<color=#0000FFFF>Time Lord</color>", 0f, 0f, 100f, 5f, PercentFormat);
-			MedicOn = new CustomNumberOption(true, num++, "<color=#006600FF>Medic</color>", 0f, 0f, 100f, 5f, PercentFormat);
-			SeerOn = new CustomNumberOption(true, num++, "<color=#FFCC80FF>Seer</color>", 0f, 0f, 100f, 5f, PercentFormat);
-			ChildOn = new CustomNumberOption(true, num++, "Child", 0f, 0f, 100f, 5f, PercentFormat);
-			SpyOn = new CustomNumberOption(true, num++, "<color=#CCA3CCFF>Spy</color>", 0f, 0f, 100f, 5f, PercentFormat);
+			MayorOn = new CustomNumberOption(true, num++, "<color=#704FA8FF>Mayor</color>", 0f, 0f, 100f, 10f, PercentFormat);
+			LoversOn = new CustomNumberOption(true, num++, "<color=#FF66CCFF>Lovers</color>", 0f, 0f, 100f, 10f, PercentFormat);
+			SheriffOn = new CustomNumberOption(true, num++, "<color=#FFFF00FF>Sheriff</color>", 0f, 0f, 100f, 10f, PercentFormat);
+			EngineerOn = new CustomNumberOption(true, num++, "<color=#FFA60AFF>Engineer</color>", 0f, 0f, 100f, 10f, PercentFormat);
+			SwapperOn = new CustomNumberOption(true, num++, "<color=#66E666FF>Swapper</color>", 0f, 0f, 100f, 10f, PercentFormat);
+			InvestigatorOn = new CustomNumberOption(true, num++, "<color=#00B3B3FF>Investigator</color>", 0f, 0f, 100f, 10f, PercentFormat);
+			TimeLordOn = new CustomNumberOption(true, num++, "<color=#0000FFFF>Time Lord</color>", 0f, 0f, 100f, 10f, PercentFormat);
+			MedicOn = new CustomNumberOption(true, num++, "<color=#006600FF>Medic</color>", 0f, 0f, 100f, 10f, PercentFormat);
+			SeerOn = new CustomNumberOption(true, num++, "<color=#FFCC80FF>Seer</color>", 0f, 0f, 100f, 10f, PercentFormat);
+			ChildOn = new CustomNumberOption(true, num++, "Child", 0f, 0f, 100f, 10f, PercentFormat);
+			SpyOn = new CustomNumberOption(true, num++, "<color=#CCA3CCFF>Spy</color>", 0f, 0f, 100f, 10f, PercentFormat);
 			SnitchOn =
-				new CustomNumberOption(true, num++, "<color=#D4AF37FF>Snitch</color>", 0f, 0f, 100f, 5f, PercentFormat);
+				new CustomNumberOption(true, num++, "<color=#D4AF37FF>Snitch</color>", 0f, 0f, 100f, 10f, PercentFormat);
 			AltruistOn =
-				new CustomNumberOption(true, num++, "<color=#660000FF>Altruist</color>", 0f, 0f, 100f, 5f, PercentFormat);
-			
+				new CustomNumberOption(true, num++, "<color=#660000FF>Altruist</color>", 0f, 0f, 100f, 10f, PercentFormat);
 
 
 			NeutralRoles =
 				new CustomHeaderOption(num++, "Neutral Roles");
-			JesterOn = new CustomNumberOption(true, num++, "<color=#FFBFCCFF>Jester</color>", 0f, 0f, 100f, 5f, PercentFormat);
-			ShifterOn = new CustomNumberOption(true, num++, "<color=#999999FF>Shifter</color>", 0f, 0f, 100f, 5f, PercentFormat);
-			GlitchOn = new CustomNumberOption(true, num++, "<color=#00FF00FF>The Glitch</color>", 0f, 0f, 100f, 5f, PercentFormat);
-			ExecutionerOn = new CustomNumberOption(true, num++, "<color=#8C4005FF>Executioner</color>", 0f, 0f, 100f, 5f, PercentFormat);
-			ArsonistOn = new CustomNumberOption(true, num++, "<color=#FF4D00FF>Arsonist</color>", 0f, 0f, 100f, 5f, PercentFormat);
+			JesterOn = new CustomNumberOption(true, num++, "<color=#FFBFCCFF>Jester</color>", 0f, 0f, 100f, 10f, PercentFormat);
+			ShifterOn = new CustomNumberOption(true, num++, "<color=#999999FF>Shifter</color>", 0f, 0f, 100f, 10f, PercentFormat);
+			GlitchOn = new CustomNumberOption(true, num++, "<color=#00FF00FF>The Glitch</color>", 0f, 0f, 100f, 10f, PercentFormat);
+			ExecutionerOn = new CustomNumberOption(true, num++, "<color=#8C4005FF>Executioner</color>", 0f, 0f, 100f, 10f, PercentFormat);
+			ArsonistOn = new CustomNumberOption(true, num++, "<color=#FF4D00FF>Arsonist</color>", 0f, 0f, 100f, 10f, PercentFormat);
 
 
 			ImpostorRoles =
 				new CustomHeaderOption(num++, "Impostor Roles");
-			JanitorOn = new CustomNumberOption(true, num++, "<color=#FF0000FF>Janitor</color>", 0f, 0f, 100f, 5f, PercentFormat);
-			MorphlingOn = new CustomNumberOption(true, num++, "<color=#FF0000FF>Morphling</color>", 0f, 0f, 100f, 5f, PercentFormat);
-			CamouflagerOn = new CustomNumberOption(true, num++, "<color=#FF0000FF>Camouflager</color>", 0f, 0f, 100f, 5f, PercentFormat);
-			MinerOn = new CustomNumberOption(true, num++, "<color=#FF0000FF>Miner</color>", 0f, 0f, 100f, 5f, PercentFormat);
-			SwooperOn = new CustomNumberOption(true, num++, "<color=#FF0000FF>Swooper</color>", 0f, 0f, 100f, 5f, PercentFormat);
+			JanitorOn = new CustomNumberOption(true, num++, "<color=#FF0000FF>Janitor</color>", 0f, 0f, 100f, 10f, PercentFormat);
+			MorphlingOn = new CustomNumberOption(true, num++, "<color=#FF0000FF>Morphling</color>", 0f, 0f, 100f, 10f, PercentFormat);
+			CamouflagerOn = new CustomNumberOption(true, num++, "<color=#FF0000FF>Camouflager</color>", 0f, 0f, 100f, 10f, PercentFormat);
+			MinerOn = new CustomNumberOption(true, num++, "<color=#FF0000FF>Miner</color>", 0f, 0f, 100f, 10f, PercentFormat);
+			SwooperOn = new CustomNumberOption(true, num++, "<color=#FF0000FF>Swooper</color>", 0f, 0f, 100f, 10f, PercentFormat);
 
 
 			Modifiers = new CustomHeaderOption(num++, "Modifiers");
-			TorchOn = new CustomNumberOption(true, num++, "<color=#FFFF99FF>Torch</color>", 0f, 0f, 100f, 5f, PercentFormat);
+			TorchOn = new CustomNumberOption(true, num++, "<color=#FFFF99FF>Torch</color>", 0f, 0f, 100f, 10f, PercentFormat);
 			DiseasedOn =
-				new CustomNumberOption(true, num++, "<color=#808080FF>Diseased</color>", 0f, 0f, 100f, 5f, PercentFormat);
-			FlashOn = new CustomNumberOption(true, num++, "<color=#FF8080FF>Flash</color>", 0f, 0f, 100f, 5f, PercentFormat);
-			TiebreakerOn = new CustomNumberOption(true, num++, "<color=#99E699FF>Tiebreaker</color>", 0f, 0f, 100f, 5f, PercentFormat);
-			DrunkOn = new CustomNumberOption(true, num++, "<color=#758000FF>Drunk</color>", 0f, 0f, 100f, 5f, PercentFormat);
-			BigBoiOn = new CustomNumberOption(true, num++, "<color=#FF8080FF>Giant</color>", 0f, 0f, 100f, 5f, PercentFormat);
+				new CustomNumberOption(true, num++, "<color=#808080FF>Diseased</color>", 0f, 0f, 100f, 10f, PercentFormat);
+			FlashOn = new CustomNumberOption(true, num++, "<color=#FF8080FF>Flash</color>", 0f, 0f, 100f, 10f, PercentFormat);
+			TiebreakerOn = new CustomNumberOption(true, num++, "<color=#99E699FF>Tiebreaker</color>", 0f, 0f, 100f, 10f, PercentFormat);
+			DrunkOn = new CustomNumberOption(true, num++, "<color=#758000FF>Drunk</color>", 0f, 0f, 100f, 10f, PercentFormat);
+			BigBoiOn = new CustomNumberOption(true, num++, "<color=#FF8080FF>Giant</color>", 0f, 0f, 100f, 10f, PercentFormat);
 			ButtonBarryOn =
 				new CustomNumberOption(true, num++, "<color=#E600FFFF>Button Barry</color>", 0f, 0f, 100f, 5f, PercentFormat);
 
@@ -382,7 +384,7 @@ namespace ProxyOfUs.CustomOption
 				new CustomNumberOption(num++, "Morphling Duration", 10, 5, 15, 1f, CooldownFormat);
 
 			Camouflager =
-				new CustomHeaderOption(num++,  "<color=#FF0000FF>Camouflager</color>");
+				new CustomHeaderOption(num++, "<color=#FF0000FF>Camouflager</color>");
 			CamouflagerCooldown =
 				new CustomNumberOption(num++, "Camouflager Cooldown", 25, 10, 40, 2.5f, CooldownFormat);
 			CamouflagerDuration =

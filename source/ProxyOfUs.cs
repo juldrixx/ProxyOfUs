@@ -18,7 +18,7 @@ using UnityEngine;
 
 namespace ProxyOfUs
 {
-	[BepInPlugin("com.juldrixx.proxyofus", "Proxy Of Us", "1.0.1")]
+	[BepInPlugin("com.juldrixx.proxyofus", "Proxy Of Us", "1.0.2")]
 	[BepInDependency(ReactorPlugin.Id)]
 	public class ProxyOfUs : BasePlugin
 	{
@@ -53,8 +53,9 @@ namespace ProxyOfUs
         public static Sprite IgniteSprite;
         public static Sprite ReviveSprite;
         public static Sprite ButtonSprite;
+        public static Sprite ProxyOfUsSprite;
 
-        
+
         public override void Load()
 		{
 			this._harmony = new Harmony("com.juldrixx.proxyofus");
@@ -89,7 +90,8 @@ namespace ProxyOfUs
 			IgniteSprite = CreateSprite("ProxyOfUs.Resources.Ignite.png");
 			ReviveSprite = CreateSprite("ProxyOfUs.Resources.Revive.png");
 			ButtonSprite = CreateSprite("ProxyOfUs.Resources.Button.png");
-			
+			ProxyOfUsSprite = CreateSprite("ProxyOfUs.Resources.proxyofus.png");
+
 			PalettePatch.Load();
 			ClassInjector.RegisterTypeInIl2Cpp<RainbowBehaviour>();
 			

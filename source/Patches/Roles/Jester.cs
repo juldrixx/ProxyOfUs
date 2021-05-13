@@ -10,11 +10,11 @@ namespace ProxyOfUs.Roles
 
         public bool VotedOut = false;
 
-        protected override void IntroPrefix(IntroCutscene.Nested_0 __instance)
+        protected override void IntroPrefix(IntroCutscene __instance, ref Il2CppSystem.Collections.Generic.List<PlayerControl> yourTeam)
         {
             var jesterTeam = new List<PlayerControl>();
             jesterTeam.Add(PlayerControl.LocalPlayer);
-            __instance.yourTeam = jesterTeam;
+            yourTeam = jesterTeam;
         }
 
         internal override bool CheckEndCriteria(ShipStatus __instance)

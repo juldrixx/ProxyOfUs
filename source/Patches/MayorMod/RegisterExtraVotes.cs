@@ -168,7 +168,7 @@ namespace ProxyOfUs.MayorMod
         }
 
         [HarmonyPatch(typeof(MeetingHud), nameof(MeetingHud.VotingComplete))]
-        public static class VotingComplete
+        public static class BBFDNCCEJHI
         {
             public static bool Prefix(MeetingHud __instance)
             {

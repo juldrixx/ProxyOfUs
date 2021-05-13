@@ -84,9 +84,9 @@ namespace ProxyOfUs.Roles
 
         public List<KillButtonManager> ExtraButtons = new List<KillButtonManager>();
         public static uint NetId => PlayerControl.LocalPlayer.NetId;
-        public string PlayerName { get; set; }
+        public string PlayerName { get; set; } 
 
-        public string ColorString => "<color=" + string.Format("#{0:X2}{1:X2}{2:X2}{3:X2}", (byte)(Mathf.Clamp01(Color.r) * 255), (byte)(Mathf.Clamp01(Color.g) * 255), (byte)(Mathf.Clamp01(Color.b) * 255), (byte)(Mathf.Clamp01(Color.a) * 255)) + ">";
+        public string ColorString => "<color=#" + Color.ToHtmlStringRGBA() + ">";
 
 
         //public static T Gen<T>()
@@ -104,7 +104,7 @@ namespace ProxyOfUs.Roles
             return GetRole(PlayerControl.LocalPlayer) == this;
         }
 
-        protected virtual void IntroPrefix(IntroCutscene.Nested_0 __instance)
+        protected virtual void IntroPrefix(IntroCutscene __instance, ref Il2CppSystem.Collections.Generic.List<PlayerControl> yourteam)
         {
         }
 
@@ -210,12 +210,12 @@ namespace ProxyOfUs.Roles
             {
                 var task = new GameObject(Name + "Task").AddComponent<ImportantTextTask>();
                 task.transform.SetParent(Player.transform, false);
-                task.Text = ColorString + "Role: {Name}\n{TaskText()}"+ "</color>";
+                task.Text = $"{ColorString}Role: {Name}\n{TaskText()}</color>";
                 Player.myTasks.Insert(0, task);
                 return;
             }
 
-            Player.myTasks.ToArray()[0].Cast<ImportantTextTask>().Text = ColorString + "Role: {Name}\n{TaskText()}" + "</color>";
+            Player.myTasks.ToArray()[0].Cast<ImportantTextTask>().Text = $"{ColorString}Role: {Name}\n{TaskText()}</color>";
         }
 
         public static Role Gen(Type T, List<PlayerControl> crewmates, CustomRPC rpc)
@@ -274,15 +274,23 @@ namespace ProxyOfUs.Roles
             [HarmonyPatch(typeof(IntroCutscene), nameof(IntroCutscene.BeginCrewmate))]
             public static class IntroCutscene_BeginCrewmate
             {
+                public static void Prefix(IntroCutscene __instance, [HarmonyArgument(0)] ref Il2CppSystem.Collections.Generic.List<PlayerControl> yourTeam)
+                {
+                    IntroCutscene_CoBegin__d_MoveNext.Prefix(__instance, ref yourTeam);
+                }
+                
                 public static void Postfix(IntroCutscene __instance)
                 {
+                    
+                    IntroCutscene_CoBegin__d_MoveNext.Postfix(__instance);
+                    
                     //System.Console.WriteLine("REACHED HERE - CREW");
                     var modifier = Modifier.GetModifier(PlayerControl.LocalPlayer);
                     if (modifier != null)
                     {
                         ModifierText = Object.Instantiate(__instance.Title, __instance.Title.transform.parent, false);
                         //System.Console.WriteLine("MODIFIER TEXT PLEASE WORK");
-                        Scale = ModifierText.fontSize;
+//                        Scale = ModifierText.scale;
                     }
                     else
                     {
@@ -294,6 +302,10 @@ namespace ProxyOfUs.Roles
             [HarmonyPatch(typeof(IntroCutscene), nameof(IntroCutscene.BeginImpostor))]
             public static class IntroCutscene_BeginImpostor
             {
+                public static void Prefix(IntroCutscene __instance, [HarmonyArgument(0)] ref Il2CppSystem.Collections.Generic.List<PlayerControl> yourTeam)
+                {
+                    IntroCutscene_CoBegin__d_MoveNext.Prefix(__instance, ref yourTeam);
+                }
                 public static void Postfix(IntroCutscene __instance)
                 {
                     //System.Console.WriteLine("REACHED HERE - IMP");
@@ -302,7 +314,7 @@ namespace ProxyOfUs.Roles
                     {
                         ModifierText = Object.Instantiate(__instance.Title, __instance.Title.transform.parent, false);
                         //System.Console.WriteLine("MODIFIER TEXT PLEASE WORK");
-                        Scale = ModifierText.fontSize;
+//                        Scale = ModifierText.scale;
                     }
                     else
                     {
@@ -311,19 +323,18 @@ namespace ProxyOfUs.Roles
                 }
             }
 
-
-            [HarmonyPatch(typeof(IntroCutscene.Nested_0), nameof(IntroCutscene.Nested_0.MoveNext))]
+            
             public static class IntroCutscene_CoBegin__d_MoveNext
             {
                 public static float TestScale;
 
-                public static void Prefix(IntroCutscene.Nested_0 __instance)
+                public static void Prefix(IntroCutscene __instance, ref Il2CppSystem.Collections.Generic.List<PlayerControl> yourTeam)
                 {
                     var role = GetRole(PlayerControl.LocalPlayer);
 
                     if (role != null)
                     {
-                        role.IntroPrefix(__instance);
+                        role.IntroPrefix(__instance, ref yourTeam);
                         ;
                     }
 
@@ -331,35 +342,36 @@ namespace ProxyOfUs.Roles
                 }
 
 
-                public static void Postfix(IntroCutscene.Nested_0 __instance)
+                public static void Postfix(IntroCutscene __instance)
                 {
                     var role = GetRole(PlayerControl.LocalPlayer);
-                    var alpha = __instance.__this.Title.color.a;
+                    var alpha = __instance.Title.color.a;
+                    
                     if (role != null && !role.Hidden)
                     {
 
-                        __instance.__this.Title.text = role.Name;
-                        __instance.__this.Title.color = role.Color;
-                        __instance.__this.ImpostorText.text = role.ImpostorText();
-                        __instance.__this.ImpostorText.gameObject.SetActive(true);
-                        __instance.__this.BackgroundBar.material.color = role.Color;
-                        TestScale = Mathf.Max(__instance.__this.Title.fontSize, TestScale);
-                        __instance.__this.Title.fontSize = TestScale / role.Scale;
+                        __instance.Title.text = role.Name;
+                        __instance.Title.color = role.Color;
+                        __instance.ImpostorText.text = role.ImpostorText();
+                        __instance.ImpostorText.gameObject.SetActive(true);
+                        __instance.BackgroundBar.material.color = role.Color;
+//                        TestScale = Mathf.Max(__instance.__this.Title.scale, TestScale);
+//                        __instance.__this.Title.scale = TestScale / role.Scale;
 
                     }
                     /*else if (!__instance.isImpostor)
                     {
-                        __instance.__this.ImpostorText.Text = "Haha imagine being a boring old crewmate";
+                        __instance.__this.ImpostorText.text = "Haha imagine being a boring old crewmate";
                     }*/
 
                     if (ModifierText != null)
                     {
                         var modifier = Modifier.GetModifier(PlayerControl.LocalPlayer);
-                        ModifierText.text = "<size=5>Modifier: " + modifier.Name + "</size>";
+                        ModifierText.text = "Modifier: " + modifier.Name;
                         ModifierText.color = modifier.Color;
-                        ModifierText.fontSize = Scale / 3f;
+//                       
                         ModifierText.transform.position =
-                            __instance.__this.transform.position - new Vector3(0f, 1.5f, 0f);
+                            __instance.transform.position - new Vector3(0f, 2.0f, 0f);
                         ModifierText.gameObject.SetActive(true);
                     }
                 }
@@ -368,13 +380,13 @@ namespace ProxyOfUs.Roles
 
             
 
-        [HarmonyPatch(typeof(PlayerControl._CoSetTasks_d__78), nameof(PlayerControl._CoSetTasks_d__78.MoveNext))]
+        [HarmonyPatch(typeof(PlayerControl), nameof(PlayerControl.SetTasks))]
         public static class PlayerControl_SetTasks
         {
-            public static void Postfix(PlayerControl._CoSetTasks_d__78 __instance)
+            public static void Postfix(PlayerControl __instance)
             {
                 if (__instance == null) return;
-                var player = __instance.__this;
+                var player = __instance;
                 var role = GetRole(player);
                 var modifier = Modifier.GetModifier(player);
 
@@ -422,11 +434,11 @@ namespace ProxyOfUs.Roles
         
         
         [HarmonyPatch(typeof(ShipStatus), nameof(ShipStatus.CheckEndCriteria))]
-        public static class ShipStatus_CheckEndCriteria
+        public static class ShipStatus_KMPKPPGPNIH
         {
             public static bool Prefix(ShipStatus __instance)
             {
-                //System.Console.WriteLine("CHECKENDCRITERIA");
+                //System.Console.WriteLine("RpcEndGame");
                 if (!AmongUsClient.Instance.AmHost) return false;
                 if (__instance.Systems.ContainsKey(SystemTypes.LifeSupp))
                 {
@@ -531,6 +543,9 @@ namespace ProxyOfUs.Roles
         [HarmonyPatch(typeof(HudManager), nameof(HudManager.Update))]
         public static class HudManager_Update
         {
+
+            private static Vector3 oldScale = Vector3.zero;
+            private static Vector3 oldPosition = Vector3.zero;
             private static void UpdateMeeting(MeetingHud __instance)
             {
 
@@ -541,6 +556,29 @@ namespace ProxyOfUs.Roles
                     {
                         player.NameText.color = role.Color;
                         player.NameText.text = role.NameText(player);
+                        if (player.NameText.text.Contains("\n"))
+                        {
+                            var newScale = Vector3.one * 1.8f;
+
+                            var trueScale = player.NameText.transform.localScale;
+                            
+                            
+                            if (trueScale != newScale) oldScale = trueScale;
+                            var newPosition = new Vector3(1.43f, 0.055f, 0f);
+
+                            var truePosition = player.NameText.transform.localPosition;
+                            
+                            if (newPosition != truePosition) oldPosition = truePosition;
+
+                            player.NameText.transform.localPosition = newPosition;
+                            player.NameText.transform.localScale = newScale;
+
+                        }
+                        else
+                        {
+                            if (oldPosition != Vector3.zero) player.NameText.transform.localPosition = oldPosition;
+                            if (oldScale != Vector3.zero) player.NameText.transform.localScale = oldScale;
+                        }
                     }
                     else
                     {

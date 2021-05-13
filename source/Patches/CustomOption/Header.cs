@@ -1,3 +1,6 @@
+// This folder is a Stripped down version of Reactor-Essentials
+// Please use https://github.com/DorCoMaNdO/Reactor-Essentials because it is more updated and less buggy
+
 using Il2CppSystem.Runtime.Remoting.Messaging;
 
 namespace ProxyOfUs.CustomOption

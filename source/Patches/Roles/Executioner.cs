@@ -9,11 +9,11 @@ namespace ProxyOfUs.Roles
         public bool TargetVotedOut = false;
         public PlayerControl target;
         
-        protected override void IntroPrefix(IntroCutscene.Nested_0 __instance)
+        protected override void IntroPrefix(IntroCutscene __instance, ref Il2CppSystem.Collections.Generic.List<PlayerControl> yourTeam)
         {
             var executionerteam = new List<PlayerControl>();
             executionerteam.Add(PlayerControl.LocalPlayer);
-            __instance.yourTeam = executionerteam;
+            yourTeam = executionerteam;
         }
 
         internal override bool CheckEndCriteria(ShipStatus __instance)

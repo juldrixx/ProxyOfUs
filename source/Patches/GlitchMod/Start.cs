@@ -5,10 +5,10 @@ using ProxyOfUs.Roles;
 
 namespace ProxyOfUs.GlitchMod
 {
-    [HarmonyPatch(typeof(IntroCutscene.Nested_0), nameof(IntroCutscene.Nested_0.MoveNext))]
+    [HarmonyPatch(typeof(IntroCutscene), nameof(IntroCutscene.BeginCrewmate))]
     class Start
     {
-        static void Postfix(IntroCutscene.Nested_0 __instance)
+        static void Postfix(IntroCutscene __instance)
         {
             var glitch = Role.AllRoles.FirstOrDefault(x => x.RoleType == RoleEnum.Glitch);
             if (glitch != null)

@@ -48,7 +48,7 @@ namespace ProxyOfUs.Roles.Modifiers
         public PlayerControl Player { get; set; }
         protected internal Color Color { get; set; }
         protected internal ModifierEnum ModifierType { get; set; }
-        public string ColorString => "<color=" + string.Format("#{0:X2}{1:X2}{2:X2}{3:X2}", (byte)(Mathf.Clamp01(Color.r) * 255), (byte)(Mathf.Clamp01(Color.g) * 255), (byte)(Mathf.Clamp01(Color.b) * 255), (byte)(Mathf.Clamp01(Color.a) * 255)) + ">";
+        public string ColorString => "<color=#" + Color.ToHtmlStringRGBA() + ">";
         protected internal Func<string> TaskText;
         
         public static void Gen(Type T, List<PlayerControl> crewmates, CustomRPC rpc)

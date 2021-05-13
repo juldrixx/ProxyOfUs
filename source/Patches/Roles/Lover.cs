@@ -14,12 +14,12 @@ namespace ProxyOfUs.Roles
         public int Num {get; set;} 
         public bool LoverImpostor {get; set;} 
 
-        protected override void IntroPrefix(IntroCutscene.Nested_0 __instance)
+        protected override void IntroPrefix(IntroCutscene __instance, ref Il2CppSystem.Collections.Generic.List<PlayerControl> yourTeam)
         {
             var loverTeam = new Il2CppSystem.Collections.Generic.List<PlayerControl>();
             loverTeam.Add(PlayerControl.LocalPlayer);
             loverTeam.Add(OtherLover.Player);
-            __instance.yourTeam = loverTeam;
+            yourTeam = loverTeam;
         }
 
         protected override bool Criteria()
@@ -181,7 +181,7 @@ namespace ProxyOfUs.Roles
             var imp = num == 2 && loverImpostor;
             Name = imp ? "Loving Impostor" : "Lover";
             Color = new Color(1f, 0.4f, 0.8f, 1f);
-            ImpostorText = () => "You are in " + ColorString + "Love" + "</color>" + " with " + ColorString + OtherLover.Player.name + "</color>";
+            ImpostorText = () => "You are in " + ColorString + "Love</color> with " + ColorString + OtherLover.Player.name;
             TaskText = () => $"Stay alive with your love {OtherLover.Player.name} \n and win together";
             RoleType = imp ? RoleEnum.LoverImpostor : RoleEnum.Lover;
             Num = num;

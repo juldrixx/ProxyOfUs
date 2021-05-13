@@ -47,7 +47,7 @@ namespace ProxyOfUs {
             public static bool Prefix()
             {
                 
-                DestroyableSingleton<HudManager>.Instance.GameSettings.Text = StringBuild();
+                DestroyableSingleton<HudManager>.Instance.GameSettings.text = StringBuild();
                 DestroyableSingleton<HudManager>.Instance.GameSettings.gameObject.SetActive(true);
                 return false;
             }
@@ -60,7 +60,7 @@ namespace ProxyOfUs {
         {
             public static void Prefix(HudManager __instance)
             {
-                __instance.GameSettings.scale = 0.3f;
+//                __instance.GameSettings.scale = 0.3f;
             }
         }*/
 
@@ -74,11 +74,15 @@ namespace ProxyOfUs {
             }
 
             private static void Postfix(ref string __result)
-            {              
+            {
+                
+                
+                
                 StringBuilder builder = new StringBuilder(AllOptions ? __result : "");
                 
                 foreach (CustomOption.CustomOption option in CustomOption.CustomOption.AllOptions)
                 {
+
                     if (option.Name == "Custom Game Settings" && !AllOptions) break;
                     if (option.Type == CustomOptionType.Button) continue;
                     if (option.Type == CustomOptionType.Header) builder.AppendLine($"\n{option.Name}");
@@ -86,10 +90,18 @@ namespace ProxyOfUs {
                     else builder.AppendLine($"{option.Name}: {option}");
                 }
 
-                __result = builder.ToString();
 
-                int num = !CustomOption.CustomOption.LobbyTextScroller ? 0 : (__result.Count(c => c == '\n') > 38 ? 1 : 0);
-                __result = num == 0 ? __result.Insert(__result.IndexOf('\n'), "Press Tab to see All Options") : __result.Insert(__result.IndexOf('\n'), " (Scroll for more)");
+                __result = builder.ToString();
+                
+                
+
+                if (CustomOption.CustomOption.LobbyTextScroller && __result.Count(c => c == '\n') > 38)
+                    __result = __result.Insert(__result.IndexOf('\n'), " (Scroll for more)");
+                else __result = __result.Insert(__result.IndexOf('\n'), "Press Tab to see All Options");
+
+
+                __result = $"<size=1.25>{__result}</size>";
+
             }
         }
 
@@ -103,7 +115,7 @@ namespace ProxyOfUs {
                     AllOptions = !AllOptions;
                 }
 
-                HudManager.Instance.GameSettings.fontSize = 1.3f;
+//                HudManager.Instance.GameSettings.scale = 0.5f;
             }
         }
 

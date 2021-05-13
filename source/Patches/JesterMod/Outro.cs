@@ -24,7 +24,7 @@ namespace ProxyOfUs.JesterMod
             var pos = __instance.WinText.transform.localPosition;
             pos.y = 1.5f;
             text.transform.position = pos;
-            text.fontSize = 1f;
+            text.text = $"<size=4>{text.text}</size>";
         }
     }
 }
