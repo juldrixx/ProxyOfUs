@@ -49,12 +49,19 @@ An Among Us mod that adds a bunch of roles, modifiers and game settings
 # Releases
 | Among Us - Version| Mod Version | Link |
 |----------|-------------|-----------------|
+| 2021.5.10s | v1.0.3 | [Download](https://github.com/juldrixx/ProxyOfUs/releases/download/v1.0.3/ProxyOfUs-v1.0.3.zip) |
 | 2021.5.10s | v1.0.2 | [Download](https://github.com/juldrixx/ProxyOfUs/releases/download/v1.0.2/ProxyOfUs-v1.0.2.zip) |
 | 2021.4.14s | v1.0.1 | [Download](https://github.com/juldrixx/ProxyOfUs/releases/download/v1.0.1/ProxyOfUs-v1.0.1.zip) |
 | 2021.4.14s | v1.0.0 | [Download](https://github.com/juldrixx/ProxyOfUs/releases/download/v1.0.0/ProxyOfUs-v1.0.0.zip) |
 
 <details>
   <summary> Changelog </summary>
+    <details>
+    <summary> v1.0.3 </summary>
+    <ul>
+      <li> New hat </li>
+    </ul>
+  </details>
   <details>
     <summary> v1.0.2 </summary>
     <ul>

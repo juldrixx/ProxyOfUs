@@ -30,7 +30,7 @@ namespace ProxyOfUs {
             position.AdjustPosition();
             
             __instance.text.text = 
-                $"<color=#00FF00FF>ProxyOfUs v1.0.2</color>\n" +
+                $"<color=#00FF00FF>ProxyOfUs v1.0.3</color>\n" +
                 $"Ping: {AmongUsClient.Instance.Ping}ms";
             
         }
