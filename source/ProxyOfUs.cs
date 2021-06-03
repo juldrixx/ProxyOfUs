@@ -18,7 +18,7 @@ using UnityEngine;
 
 namespace ProxyOfUs
 {
-	[BepInPlugin("com.juldrixx.proxyofus", "Proxy Of Us", "1.0.3")]
+	[BepInPlugin("com.juldrixx.proxyofus", "Proxy Of Us", "1.0.4")]
 	[BepInDependency(ReactorPlugin.Id)]
 	public class ProxyOfUs : BasePlugin
 	{

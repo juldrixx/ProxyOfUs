@@ -280,8 +280,7 @@ namespace ProxyOfUs.Roles
                 }
                 
                 public static void Postfix(IntroCutscene __instance)
-                {
-                    
+                {                    
                     IntroCutscene_CoBegin__d_MoveNext.Postfix(__instance);
                     
                     //System.Console.WriteLine("REACHED HERE - CREW");
@@ -306,8 +305,11 @@ namespace ProxyOfUs.Roles
                 {
                     IntroCutscene_CoBegin__d_MoveNext.Prefix(__instance, ref yourTeam);
                 }
+                
                 public static void Postfix(IntroCutscene __instance)
                 {
+                    IntroCutscene_CoBegin__d_MoveNext.Postfix(__instance);
+
                     //System.Console.WriteLine("REACHED HERE - IMP");
                     var modifier = Modifier.GetModifier(PlayerControl.LocalPlayer);
                     if (modifier != null)
@@ -335,10 +337,7 @@ namespace ProxyOfUs.Roles
                     if (role != null)
                     {
                         role.IntroPrefix(__instance, ref yourTeam);
-                        ;
                     }
-
-
                 }
 
 
@@ -357,7 +356,6 @@ namespace ProxyOfUs.Roles
                         __instance.BackgroundBar.material.color = role.Color;
 //                        TestScale = Mathf.Max(__instance.__this.Title.scale, TestScale);
 //                        __instance.__this.Title.scale = TestScale / role.Scale;
-
                     }
                     /*else if (!__instance.isImpostor)
                     {
