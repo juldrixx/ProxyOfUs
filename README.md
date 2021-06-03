@@ -49,6 +49,7 @@ An Among Us mod that adds a bunch of roles, modifiers and game settings
 # Releases
 | Among Us - Version| Mod Version | Link |
 |----------|-------------|-----------------|
+| 2021.5.25s | v1.0.4 | [Download](https://github.com/juldrixx/ProxyOfUs/releases/download/v1.0.4/ProxyOfUs-v1.0.4.zip) |
 | 2021.5.10s | v1.0.3 | [Download](https://github.com/juldrixx/ProxyOfUs/releases/download/v1.0.3/ProxyOfUs-v1.0.3.zip) |
 | 2021.5.10s | v1.0.2 | [Download](https://github.com/juldrixx/ProxyOfUs/releases/download/v1.0.2/ProxyOfUs-v1.0.2.zip) |
 | 2021.4.14s | v1.0.1 | [Download](https://github.com/juldrixx/ProxyOfUs/releases/download/v1.0.1/ProxyOfUs-v1.0.1.zip) |
@@ -56,7 +57,14 @@ An Among Us mod that adds a bunch of roles, modifiers and game settings
 
 <details>
   <summary> Changelog </summary>
-    <details>
+  <details>
+    <summary> v1.0.4 </summary>
+    <ul>
+      <li> 2021.5.25s support </li>
+      <li> Display Impostor role during IntroScene </li>
+    </ul>
+  </details>
+  <details>
     <summary> v1.0.3 </summary>
     <ul>
       <li> New hat </li>
